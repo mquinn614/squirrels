@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Three Thousand Squirrels — A Census in Central Park</title>
+  <meta name="description" content="An animated visualization of all 3,023 squirrel sightings recorded in Central Park during the October 2018 Squirrel Census.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <article>
+    <header class="hero">
+      <p class="kicker">Central Park · October 2018</p>
+      <h1>Three Thousand Squirrels</h1>
+      <p class="dek">Over two weeks in the fall of 2018, hundreds of volunteers walked every path in Central Park to count every squirrel they could find. They tallied <strong>3,023 sightings</strong> — and noted, for each one, what it was doing, what it looked like, and how it reacted to the people watching it.</p>
+      <p class="byline">Source data: <a href="https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw">NYC OpenData</a> · Scroll to begin ↓</p>
+    </header>
+
+    <section class="scrolly" aria-label="Animated map of squirrel sightings">
+      <div class="scrolly__graphic">
+        <div class="scrolly__graphic-inner">
+          <canvas id="map" role="img" aria-label="Map of Central Park showing squirrel sighting locations"></canvas>
+          <p class="loading" id="loading">Loading sightings…</p>
+        </div>
+      </div>
+
+      <div class="scrolly__text">
+        <div class="step" data-step="1">
+          <h2>Every sighting</h2>
+          <p>Each dot is one squirrel. Volunteers swept the park hectare by hectare, mostly at dawn and again at dusk — when squirrels are most active and easiest to spot.</p>
+          <p class="caption">3,023 sightings recorded across 14 days.</p>
+        </div>
+
+        <div class="step" data-step="2">
+          <h2>Two shifts a day</h2>
+          <p>Counts ran in two shifts: <span class="swatch swatch--am"></span><strong>AM</strong> just after sunrise, and <span class="swatch swatch--pm"></span><strong>PM</strong> in the late afternoon. Watch the dots breathe between the two — squirrels showed up in different places at different times of day.</p>
+        </div>
+
+        <div class="step" data-step="3">
+          <h2>Mostly grey, sometimes not</h2>
+          <p>Nearly every squirrel here is an eastern grey, but a few aren't. Roughly <strong>13%</strong> are <span class="swatch swatch--cinnamon"></span><strong>cinnamon</strong> and about <strong>4%</strong> are <span class="swatch swatch--black"></span><strong>black</strong> — color variants of the same species. The dark ones tend to cluster in the park's wooded north end.</p>
+        </div>
+
+        <div class="step" data-step="4">
+          <h2>The park speaks</h2>
+          <p>Squirrels make three vocal calls. A <strong>kuk</strong> is a sharp warning bark, often aimed at a hawk overhead. A <strong>quaa</strong> is a longer, downward call — a sustained alarm. A <strong>moan</strong> signals a more distant threat. Each pulse here marks a sighting where a volunteer heard one.</p>
+        </div>
+
+        <div class="step" data-step="5">
+          <h2>Friend, foe, or furniture</h2>
+          <p>For every sighting, volunteers noted how the squirrel reacted to them. <span class="swatch swatch--approach"></span>Some <strong>approached</strong>. <span class="swatch swatch--indifferent"></span>Most were <strong>indifferent</strong>. <span class="swatch swatch--runs"></span>Others <strong>ran</strong>. The bold ones cluster near the south end and the Mall — exactly where the tourists are.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>About the data.</strong> The 2018 Central Park Squirrel Census was organized by <a href="https://www.thesquirrelcensus.com/">The Squirrel Census</a>, a small group of researchers and volunteers who fan out across the park each fall to count, observe, and record every squirrel they see. Their dataset is published on <a href="https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw">NYC OpenData</a>.</p>
+      <p class="colophon">Built with D3 and Scrollama.</p>
+    </footer>
+  </article>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://unpkg.com/scrollama"></script>
+  <script src="main.js"></script>
+</body>
+</html>
