@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: List files to deploy
-        run: ls -lh index.html styles.css main.js squirrels.json
+        run: ls -lh index.html styles.css main.js squirrels.json park.json kuk.mp3 quaa.mp3 moan.mp3
 
       - name: Upload static files via scp (SSH)
         env:
@@ -37,7 +37,7 @@ jobs:
           export SSHPASS
           REMOTE_BASE="${DEPLOY_PATH%/}"
           sshpass -e scp -P "${DEPLOY_PORT}" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
-            index.html styles.css main.js squirrels.json \
+            index.html styles.css main.js squirrels.json park.json kuk.mp3 quaa.mp3 moan.mp3 \
             "${DEPLOY_USER}@${DEPLOY_HOST}:${REMOTE_BASE}/"
 
       - name: Verify files exist on server
@@ -53,4 +53,4 @@ jobs:
           REMOTE_BASE="${DEPLOY_PATH%/}"
           sshpass -e ssh -p "${DEPLOY_PORT}" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
             "${DEPLOY_USER}@${DEPLOY_HOST}" \
-            "ls -la '${REMOTE_BASE}' && test -f '${REMOTE_BASE}/index.html' && test -f '${REMOTE_BASE}/styles.css' && test -f '${REMOTE_BASE}/main.js' && test -f '${REMOTE_BASE}/squirrels.json'"
+            "ls -la '${REMOTE_BASE}' && test -f '${REMOTE_BASE}/index.html' && test -f '${REMOTE_BASE}/styles.css' && test -f '${REMOTE_BASE}/main.js' && test -f '${REMOTE_BASE}/squirrels.json' && test -f '${REMOTE_BASE}/park.json' && test -f '${REMOTE_BASE}/kuk.mp3'"
