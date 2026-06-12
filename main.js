@@ -1,5 +1,5 @@
 (() => {
-  // Bitmask layout — keep in sync with preprocess.py
+  // Bitmask layout: keep in sync with preprocess.py
   const RUN = 1, CHASE = 2, CLIMB = 4, EAT = 8, FORAGE = 16,
         KUK = 32, QUAA = 64, MOAN = 128,
         APPR = 1024, INDIFF = 2048, RUNSFROM = 4096;
@@ -39,7 +39,7 @@
     6: [["Approached", C.approach], ["Indifferent", C.indifferent], ["Ran away", C.runs]],
   };
 
-  // [lon, lat, anchor] — water/lawn labels get centroids computed after load
+  // [lon, lat, anchor]; water/lawn labels get centroids computed after load
   const LANDMARKS = {
     reservoir:  { name: "The Reservoir",  water: "Jacqueline Kennedy Onassis Reservoir", anchor: "center" },
     lake:       { name: "The Lake",       water: "The Lake",      anchor: "center" },

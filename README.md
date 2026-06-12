@@ -1,7 +1,7 @@
 # Three Thousand Squirrels
 
 An animated, NYT-style scrollytelling visualization of the 2018 Central Park
-Squirrel Census — all 3,023 sightings, with fur colors, activities, calls,
+Squirrel Census: all 3,023 sightings, with fur colors, activities, calls,
 human interactions, and verbatim field notes.
 
 ## How it works
@@ -17,11 +17,11 @@ Tech: D3 + Canvas + Scrollama, no build step. Just static files.
 
 ## Files
 
-- `index.html`, `styles.css`, `main.js` — the page
-- `squirrels.json` — preprocessed sightings (compact array format, see `preprocess.py`)
-- `park.json` — simplified park geometry, derived from OpenStreetMap
-- `kuk.mp3`, `quaa.mp3`, `moan.mp3` — AI-recreated squirrel calls (not field recordings)
-- `preprocess.py` — regenerates `squirrels.json` from the source CSV
+- `index.html`, `styles.css`, `main.js`: the page
+- `squirrels.json`: preprocessed sightings (compact array format, see `preprocess.py`)
+- `park.json`: simplified park geometry, derived from OpenStreetMap
+- `kuk.mp3`, `quaa.mp3`, `moan.mp3`: AI-recreated squirrel calls (not field recordings)
+- `preprocess.py`: regenerates `squirrels.json` from the source CSV
 
 ## Running locally
 
